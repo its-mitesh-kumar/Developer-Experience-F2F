@@ -115,6 +115,47 @@ dynamicPlugins:
 ### Customize the cards on the homepage (add, rearrange).
 
 [Guide](https://github.com/janus-idp/backstage-showcase/blob/main/plugins/dynamic-home-page/docs/customization.md)
+
+1. Example
+dynamicPlugins:
+  frontend:
+    janus-idp.backstage-plugin-dynamic-home-page:
+      dynamicRoutes:
+        - path: /
+          importName: DynamicHomePage
+      mountPoints:
+        - mountPoint: home.page/cards
+          importName: SearchBar
+          config:
+            layouts:
+              xl: { w: 10, h: 1, x: 1 }
+              lg: { w: 10, h: 1, x: 1 }
+              md: { w: 10, h: 1, x: 1 }
+              sm: { w: 10, h: 1, x: 1 }
+              xs: { w: 12, h: 1 }
+              xxs: { w: 12, h: 1 }
+        - mountPoint: home.page/cards
+          importName: QuickAccessCard
+          config:
+            layouts:
+              xl: { w: 7, h: 8 }
+              lg: { w: 7, h: 8 }
+              md: { w: 7, h: 8 }
+              sm: { w: 12, h: 8 }
+              xs: { w: 12, h: 8 }
+              xxs: { w: 12, h: 8 }
+        - mountPoint: home.page/cards
+          importName: CatalogStarredEntitiesCard
+          config:
+            layouts:
+              xl: { w: 5, h: 4, x: 7 }
+              lg: { w: 5, h: 4, x: 7 }
+              md: { w: 5, h: 4, x: 7 }
+              sm: { w: 12, h: 4 }
+              xs: { w: 12, h: 4 }
+              xxs: { w: 12, h: 4 }
+
+2. More Cards 
 ```
     dynamicPlugins:
       rootDirectory: dynamic-plugins-root
