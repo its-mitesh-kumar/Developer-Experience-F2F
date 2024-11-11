@@ -114,6 +114,7 @@ dynamicPlugins:
 
 ### Customize the cards on the homepage (add, rearrange).
 
+[Guide](https://github.com/janus-idp/backstage-showcase/blob/main/plugins/dynamic-home-page/docs/customization.md)
 ```
     dynamicPlugins:
       rootDirectory: dynamic-plugins-root
