@@ -19,4 +19,18 @@ auth:
             #     - resolver: usernameMatchingUserEntityName
 
 ```
-3. 
+3.  Add Catalog Snippets 
+
+```
+catalog:
+  import:
+    entityFilename: catalog-info.yaml
+    pullRequestBranchName: backstage-integration
+  rules:
+    - allow: [Component, System, Group, Resource, Location, Template, API]
+  locations:
+    - type: url
+      target: https://github.com/its-mitesh-kumar/nationalparks-py/blob/master/catalog-info.yaml
+      rules:
+        - allow: [User, Group]
+```
