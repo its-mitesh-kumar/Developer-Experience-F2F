@@ -1,8 +1,18 @@
 1. Go to `ConfigMaps` edit  `app-config-rhdh`
 
-2. 
 
 2. Add auth block (app level)
+
+```
+    backend:
+      # Used for enabling authentication, secret is shared by all backend plugins
+      # See https://backstage.io/docs/auth/service-to-service-auth for
+      # information on the format
+      auth:
+        dangerouslyDisableDefaultAuthPolicy: true
+        keys:
+          - secret: 'gh'
+```
 
 ```
 auth:
