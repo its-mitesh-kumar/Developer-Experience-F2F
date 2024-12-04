@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Developer-Experience-F2F
+  annotations:
+    github.com/project-slug: its-mitesh-kumar/Developer-Experience-F2F
+spec:
+  type: other
+  lifecycle: unknown
+  owner: user:development/guest
